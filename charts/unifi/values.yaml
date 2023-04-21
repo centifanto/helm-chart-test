@@ -48,7 +48,7 @@ service:
     ports:
       # -- Configure Web interface + API port
       # @default -- See values.yaml
-      https:
+      http:
         port: 8443
         protocol: HTTPS
       # -- Configure Controller port used for device command/control
