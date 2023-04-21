@@ -115,7 +115,7 @@ ingress:
             pathType: Prefix
             service:
               ## Overrides the service name reference for this path
-              name: unifi
+              name: main
               ## Overrides the service port reference for this path
               port: 8443
 
