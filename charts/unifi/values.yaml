@@ -100,7 +100,7 @@ ingress:
   main:
     enabled: true
     annotations:
-      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 
     ingressClassName:  traefik # "nginx"
 
@@ -118,6 +118,11 @@ ingress:
               name: unifi
               ## Overrides the service port reference for this path
               port: 8443
+
+    tls:
+     - secretName: ingress-tls-secret
+       hosts:
+         - unifi.coffee.lan
 
   # -- Enable and configure settings for the captive portal ingress under this key.
   # @default -- See values.yaml
