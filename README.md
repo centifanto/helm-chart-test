@@ -5,7 +5,7 @@
 Example project to demo testing and hosting a chart repository with GitHub Pages and Actions.
 
 ## Actions
-
+ 
 * [@helm/kind-action](https://github.com/helm/kind-action)
 * [@helm/chart-testing-action](https://github.com/helm/chart-testing-action)
 * [@helm/chart-releaser-action](https://github.com/helm/chart-releaser-action)
