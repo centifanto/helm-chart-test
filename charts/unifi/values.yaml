@@ -1,10 +1,3 @@
-#
-# IMPORTANT NOTE
-#
-# This chart inherits from our common library chart. You can check the default values/options here:
-# https://github.com/geek-cookbook/library-charts/tree/main/charts/stable/common/values.yaml
-#
-
 image:
   # -- image repository
   repository: jacobalberty/unifi
@@ -101,6 +94,8 @@ service:
       controller:
         enabled: true
         type: LoadBalancer
+        annotations:
+          metallb.universe.tf/allow-shared-ip: unifi_services
         port: 8080
         protocol: TCP
       # -- Configure Speedtest port (used for UniFi mobile speed test)
@@ -108,6 +103,8 @@ service:
       speedtest:
         enabled: true
         type: LoadBalancer
+        annotations:
+          metallb.universe.tf/allow-shared-ip: unifi_services
         port: 6789
         protocol: TCP
 
@@ -118,6 +115,8 @@ service:
       stun:
         enabled: true
         type: LoadBalancer
+        annotations:
+          metallb.universe.tf/allow-shared-ip: unifi_services
         port: 3478
         protocol: UDP
       # -- Configure remote syslog port
@@ -125,6 +124,8 @@ service:
       syslog:
         enabled: true
         type: LoadBalancer
+        annotations:
+          metallb.universe.tf/allow-shared-ip: unifi_services
         port: 5514
         protocol: UDP
       # -- Configure device discovery port
@@ -132,6 +133,8 @@ service:
       discovery:
         enabled: true
         type: LoadBalancer
+        annotations:
+          metallb.universe.tf/allow-shared-ip: unifi_services
         port: 10001
         protocol: UDP
 
