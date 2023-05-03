@@ -38,6 +38,7 @@ podSecurityContext:
 # @default -- See values.yaml
 service:
   main:
+    enabled: true
     ports:
       # -- Configure Web interface + API port
       # @default -- See values.yaml
