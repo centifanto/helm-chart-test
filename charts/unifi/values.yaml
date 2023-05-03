@@ -54,6 +54,8 @@ service:
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
     loadBalancerIP: 10.1.12.241
+    selector:
+      app: unifi
     ports:
       speedtest:
         enabled: true
@@ -74,21 +76,23 @@ service:
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
     loadBalancerIP: 10.1.12.241
+    selector:
+      app: unifi
     ports:
       stun:
         enabled: true
         port: 3478
-        targetPort: 3478-udp
+        targetPort: 3478
         protocol: UDP
       syslog:
         enabled: true
         port: 5514
-        targetPort: 5514-udp
+        targetPort: 5514
         protocol: UDP
       discovery:
         enabled: true
         port: 10001
-        targetPort: 10001-udp
+        targetPort: 10001
         protocol: UDP
 
 ingress:
