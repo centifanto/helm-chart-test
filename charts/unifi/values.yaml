@@ -94,6 +94,12 @@ service:
         port: 10001
         targetPort: 10001
         protocol: UDP
+      l2_discovery:
+        enabled: true
+        port: 1900
+        targetPort: 1900
+        protocol: UDP
+
 
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
