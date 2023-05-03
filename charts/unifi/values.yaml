@@ -58,10 +58,12 @@ service:
       speedtest:
         enabled: true
         port: 6789
+        targetPort: 6789
         protocol: TCP
       controller:
         enabled: true
         port: 8080
+        targetPort: 8080
         protocol: TCP
 
   udp:
@@ -76,14 +78,17 @@ service:
       stun:
         enabled: true
         port: 3478
+        targetPort: 3478
         protocol: UDP
       syslog:
         enabled: true
         port: 5514
+        targetPort: 5514
         protocol: UDP
       discovery:
         enabled: true
         port: 10001
+        targetPort: 10001
         protocol: UDP
 
 ingress:
