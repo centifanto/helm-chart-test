@@ -78,17 +78,17 @@ service:
       stun:
         enabled: true
         port: 3478
-        targetPort: 3478
+        targetPort: 3478-udp
         protocol: UDP
       syslog:
         enabled: true
         port: 5514
-        targetPort: 5514
+        targetPort: 5514-udp
         protocol: UDP
       discovery:
         enabled: true
         port: 10001
-        targetPort: 10001
+        targetPort: 10001-udp
         protocol: UDP
 
 ingress:
