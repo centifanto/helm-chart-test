@@ -7,6 +7,39 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: v7.3.83
+    created: "2023-05-03T20:03:36.223450112Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.22
+    description: Ubiquiti Network's Unifi Controller
+    digest: 42cd20efbe57a9a19a1b08e8aa93823dce492d2be3b85cb9e701a1967cc80019
+    home: https://github.com/geek-cookbook/charts/tree/master/charts/stable/unifi
+    icon: https://prd-www-cdn.ubnt.com/static/favicon-152.png
+    keywords:
+    - ubiquiti
+    - unifi
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    - email: mike@quadra-tec.net
+      name: mcronce
+    name: unifi
+    sources:
+    - https://github.com/jacobalberty/unifi-docker
+    urls:
+    - https://github.com/centifanto/helm-chart-test/releases/download/unifi-5.1.15/unifi-5.1.15.tgz
+    version: 5.1.15
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: v7.3.83
     created: "2023-04-25T00:39:28.631426965Z"
     dependencies:
     - name: common
@@ -430,4 +463,4 @@ entries:
     urls:
     - https://github.com/centifanto/helm-chart-test/releases/download/unifi-5.1.2/unifi-5.1.2.tgz
     version: 5.1.2
-generated: "2023-04-25T00:39:28.63149377Z"
+generated: "2023-05-03T20:03:36.223595912Z"
