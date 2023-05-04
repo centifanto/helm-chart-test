@@ -67,6 +67,26 @@ service:
         port: 8080
         targetPort: 8080
         protocol: TCP
+      remote-443-tcp:
+        enabled: true
+        port: 443
+        targetPort: 443
+        protocol: TCP
+      remote-8883-tcp:
+        enabled: true
+        port: 8883
+        targetPort: 8883
+        protocol: TCP
+      device-app-comm:
+        enabled: true
+        port: 8080
+        targetPort: 8080
+        protocol: TCP
+      dns-tcp:
+        enabled: true
+        port: 53
+        targetPort: 53
+        protocol: TCP
 
   udp:
     enabled: true
@@ -99,6 +119,17 @@ service:
         port: 1900
         targetPort: 1900
         protocol: UDP
+      remote-443-udp:
+        enabled: true
+        port: 443
+        targetPort: 443
+        protocol: UDP
+      dns-udp:
+        enabled: true
+        port: 53
+        targetPort: 53
+        protocol: UDP
+
 
 
 ingress:
