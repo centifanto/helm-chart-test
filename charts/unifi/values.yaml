@@ -67,11 +67,11 @@ service:
         port: 8080
         targetPort: 8080
         protocol: TCP
-      remote443tcp:
-        enabled: true
-        port: 443
-        targetPort: 443
-        protocol: TCP
+      # remote443tcp:
+      #   enabled: true
+      #   port: 443
+      #   targetPort: 443
+      #   protocol: TCP
       remote8883tcp:
         enabled: true
         port: 8883
