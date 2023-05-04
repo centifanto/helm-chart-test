@@ -77,11 +77,6 @@ service:
         port: 8883
         targetPort: 8883
         protocol: TCP
-      device-app-comm:
-        enabled: true
-        port: 8080
-        targetPort: 8080
-        protocol: TCP
       dns-tcp:
         enabled: true
         port: 53
