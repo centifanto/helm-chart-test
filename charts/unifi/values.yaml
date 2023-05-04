@@ -53,7 +53,7 @@ service:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
-    loadBalancerIP: 10.1.12.240
+    loadBalancerIP: 10.1.12.241
     selector:
       app: unifi
     ports:
@@ -90,7 +90,7 @@ service:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
-    loadBalancerIP: 10.1.12.240
+    loadBalancerIP: 10.1.12.241
     selector:
       app: unifi
     ports:
