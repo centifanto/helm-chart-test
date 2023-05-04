@@ -53,7 +53,7 @@ service:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
-    loadBalancerIP: 10.1.12.241
+    loadBalancerIP: 10.1.12.240
     selector:
       app: unifi
     ports:
@@ -67,21 +67,21 @@ service:
         port: 8080
         targetPort: 8080
         protocol: TCP
-      remote443tcp:
-        enabled: true
-        port: 443
-        targetPort: 443
-        protocol: TCP
-      remote8883tcp:
-        enabled: true
-        port: 8883
-        targetPort: 8883
-        protocol: TCP
-      dnstcp:
-        enabled: true
-        port: 53
-        targetPort: 53
-        protocol: TCP
+      # remote443tcp:
+      #   enabled: true
+      #   port: 443
+      #   targetPort: 443
+      #   protocol: TCP
+      # remote8883tcp:
+      #   enabled: true
+      #   port: 8883
+      #   targetPort: 8883
+      #   protocol: TCP
+      # dnstcp:
+      #   enabled: true
+      #   port: 53
+      #   targetPort: 53
+      #   protocol: TCP
 
   udp:
     enabled: true
@@ -90,7 +90,7 @@ service:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
-    loadBalancerIP: 10.1.12.241
+    loadBalancerIP: 10.1.12.240
     selector:
       app: unifi
     ports:
@@ -114,11 +114,11 @@ service:
         port: 1900
         targetPort: 1900
         protocol: UDP
-      dnsudp:
-        enabled: true
-        port: 53
-        targetPort: 53
-        protocol: UDP
+      # dnsudp:
+      #   enabled: true
+      #   port: 53
+      #   targetPort: 53
+      #   protocol: UDP
 
 
 
@@ -130,6 +130,8 @@ ingress:
     annotations:
       #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
       traefik.ingress.kubernetes.io/service.serversscheme: https
+      metallb.universe.tf/allow-shared-ip: unifi_services
+      metallb.universe.tf/address-pool: default-addresspool
 
     ingressClassName:  traefik # "nginx"
 
