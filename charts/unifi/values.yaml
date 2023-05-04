@@ -114,11 +114,6 @@ service:
         port: 1900
         targetPort: 1900
         protocol: UDP
-      remote443udp:
-        enabled: true
-        port: 443
-        targetPort: 443
-        protocol: UDP
       dnsudp:
         enabled: true
         port: 53
