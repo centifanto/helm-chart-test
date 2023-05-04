@@ -133,7 +133,10 @@ ingress:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
 
-    ingressClassName:  traefik # "nginx"
+    type: LoadBalancer
+    loadBalancerIP: 10.1.12.240
+
+    ingressClassName:  traefik 
 
     hosts:
       -  ## Host address. Helm template can be passed.
