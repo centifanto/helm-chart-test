@@ -48,12 +48,12 @@ service:
 
   tcp:
     enabled: true
-    externalTrafficPolicy: Local
+    externalTrafficPolicy: Cluster
     annotations:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
-    loadBalancerIP: 10.1.12.241
+    loadBalancerIP: 10.1.12.240
     selector:
       app: unifi
     ports:
@@ -85,12 +85,12 @@ service:
 
   udp:
     enabled: true
-    externalTrafficPolicy: Local
+    externalTrafficPolicy: Cluster
     annotations:
       metallb.universe.tf/allow-shared-ip: unifi_services
       metallb.universe.tf/address-pool: default-addresspool
     type: LoadBalancer
-    loadBalancerIP: 10.1.12.241
+    loadBalancerIP: 10.1.12.240
     selector:
       app: unifi
     ports:
