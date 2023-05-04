@@ -128,10 +128,10 @@ ingress:
   main:
     enabled: true
     annotations:
-      #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-      traefik.ingress.kubernetes.io/service.serversscheme: https
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      #traefik.ingress.kubernetes.io/service.serversscheme: https
 
-    ingressClassName:  traefik 
+    ingressClassName:  nginx 
 
     hosts:
       -  ## Host address. Helm template can be passed.
